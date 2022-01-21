@@ -2,15 +2,51 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="tunzasoft.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane prefHeight="651.0" prefWidth="1113.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tunzasoft.HelloController">
+   <left>
+      <AnchorPane prefHeight="649.0" prefWidth="122.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="0.5" left="0.5" right="0.5" top="0.5" />
+         </BorderPane.margin>
+         <children>
+            <VBox layoutX="41.0" layoutY="42.0" prefHeight="649.0" prefWidth="179.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label prefHeight="37.0" prefWidth="137.0" text="TunzaFile" textFill="#ab9a9a" wrapText="true" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </padding>
+                     <font>
+                        <Font name="Book Antiqua" size="23.0" />
+                     </font>
+                     <effect>
+                        <Bloom threshold="0.48" />
+                     </effect>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="128.0" layoutY="171.0" prefHeight="651.0" prefWidth="989.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox prefHeight="130.0" prefWidth="989.0" style="-fx-background-color: grey;" VBox.vgrow="ALWAYS" />
+                  <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: pink;" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
